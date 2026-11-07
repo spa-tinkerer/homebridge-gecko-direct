@@ -1,0 +1,27 @@
+name: Bug report
+description: Something isn't working with your spa
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: pack
+    attributes:
+      label: Spa pack
+      description: The Homebridge log prints this when the plugin connects, for example inYT or inXE.
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin, Homebridge and Node.js versions
+      placeholder: "plugin 1.0.0, Homebridge 2.5.0, Node 22"
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Turn on Debug logging in the plugin settings, restart Homebridge, and paste the lines that mention the spa.
+      render: shell
