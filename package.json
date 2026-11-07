@@ -1,0 +1,42 @@
+{
+  "name": "homebridge-gecko-direct",
+  "displayName": "Gecko Spa Direct",
+  "version": "1.0.0",
+  "description": "Local HomeKit control of Gecko in.touch2 hot tubs over your network. No cloud, no account, no bridge.",
+  "main": "index.js",
+  "author": "spa-tinkerer",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/spa-tinkerer/homebridge-gecko-direct#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spa-tinkerer/homebridge-gecko-direct.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spa-tinkerer/homebridge-gecko-direct/issues"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "config.schema.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.js"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homekit",
+    "gecko",
+    "intouch2",
+    "in.touch2",
+    "spa",
+    "hot tub"
+  ],
+  "engines": {
+    "node": "^18.20.4 || ^20.15.1 || ^22 || ^24",
+    "homebridge": "^1.8.0 || ^2.0.0-beta.0"
+  },
+  "dependencies": {}
+}

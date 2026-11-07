@@ -1,0 +1,71 @@
+{
+  "pluginAlias": "GeckoSpaDirect",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Talks to the Gecko in.touch2 home module on your local network (UDP port 10022). Homebridge must be on the same subnet as the spa. In Docker, use host networking.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "Spa",
+        "required": true,
+        "description": "Prefix for every accessory, for example 'Spa Pump 1'."
+      },
+      "spaIp": {
+        "title": "Spa IP address",
+        "type": "string",
+        "format": "ipv4",
+        "required": true,
+        "placeholder": "192.168.1.50",
+        "description": "Give the spa a fixed address in your router."
+      },
+      "pumps": {
+        "title": "Number of jet pumps",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 2
+      },
+      "blower": {
+        "title": "Spa has an air blower",
+        "type": "boolean",
+        "default": false
+      },
+      "watercareSwitches": {
+        "title": "Show watercare mode switches",
+        "type": "boolean",
+        "default": true
+      },
+      "units": {
+        "title": "Thermostat display units",
+        "type": "string",
+        "default": "C",
+        "oneOf": [
+          { "title": "Celsius", "enum": ["C"] },
+          { "title": "Fahrenheit", "enum": ["F"] }
+        ]
+      },
+      "minSetpoint": {
+        "title": "Lowest setpoint (C)",
+        "type": "number",
+        "default": 20,
+        "minimum": 10,
+        "maximum": 40
+      },
+      "maxSetpoint": {
+        "title": "Highest setpoint (C)",
+        "type": "number",
+        "default": 40,
+        "minimum": 20,
+        "maximum": 40
+      },
+      "debug": {
+        "title": "Debug logging",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }
+}

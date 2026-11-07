@@ -1,0 +1,5 @@
+node_modules/
+*.tgz
+*.tar
+.DS_Store
+PUBLISHING.md
